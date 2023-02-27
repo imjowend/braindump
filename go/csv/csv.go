@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-func main() {
+//func main() {
 	path := "file.csv"
 	comma := ";"
 	delimiter(path, comma)
