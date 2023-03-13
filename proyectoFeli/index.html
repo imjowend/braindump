@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Interfaz de celular para tablet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      /* Estilos para los botones */
+      .button {
+        display: inline-block;
+        border: 1px solid #ccc;
+        background-color: #f2f2f2;
+        color: #333;
+        font-size: 24px;
+        padding: 12px 20px;
+        margin: 10px;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      /* Estilos para el contenedor */
+      #container {
+        text-align: center;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <!-- Input y botones del 1 al 0 -->
+      <div>
+        <input type="text" id="input" placeholder="Ingresa el número aquí" style="font-size: 24px; padding: 12px 20px; border-radius: 5px; border: 1px solid #ccc; margin: 10px;">
+      </div>
+      <div>
+        <button class="button" onclick="insert('1'); playSound()">1</button>
+        <button class="button" onclick="insert('2'); playSound()">2</button>
+        <button class="button" onclick="insert('3'); playSound()">3</button>
+      </div>
+      <div>
+        <button class="button" onclick="insert('4'); playSound()">4</button>
+        <button class="button" onclick="insert('5'); playSound()">5</button>
+        <button class="button" onclick="insert('6'); playSound()">6</button>
+      </div>
+      <div>
+        <button class="button" onclick="insert('7'); playSound()">7</button>
+        <button class="button" onclick="insert('8'); playSound()">8</button>
+        <button class="button" onclick="insert('9'); playSound()">9</button>
+      </div>
+      <div>
+        <button class="button" onclick="insert('*'); playSound()">*</button>
+        <button class="button" onclick="insert('0'); playSound()">0</button>
+        <button class="button" onclick="insert('#'); playSound()">#</button>
+      </div>
+      <!-- Botón de borrar -->
+      <div>
+        <button class="button" onclick="clearDigit(); playSound()">Borrar</button>
+      </div>
+    </div>
+
+    <audio id="audio">
+      <source src="ambient_42.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      // Función para insertar un dígito en el input
+      function insert(digit) {
+        var input = document.getElementById("input");
+        input.value += digit;
+      }
+
+      // Función para borrar el último dígito del input
+      function clearDigit() {
+        var input = document.getElementById("input");
+        var value = input.value;
+        input.value = value.substr(0, value.length - 1);
+      }
+      // Función para reproducir un sonido
+    function playSound() {
+      var audio = document.getElementById("audio");
+      audio.currentTime = 0;
+      audio.play();
+    }
+    </script>
+  </body>
+</html>
+

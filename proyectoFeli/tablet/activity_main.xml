@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Input y botones del 1 al 0 -->
+    <RelativeLayout
+        android:id="@+id/number_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/number_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="Ingresa el número aquí"
+            android:inputType="number"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/number_input"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_1"
+                style="@style/ButtonStyle"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/button_2"
+                style="@style/ButtonStyle"
+                android:text="2" />
+
+            <Button
+                android:id="@+id/button_3"
+                style="@style/ButtonStyle"
+                android:text="3" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_4"
+                style="@style/ButtonStyle"
+                android:text="4" />
+
+            <Button
+                android:id="@+id/button_5"
+                style="@style/ButtonStyle"
+                android:text="5" />
+
+            <Button
+                android:id="@+id/button_6"
+                style="@style/ButtonStyle"
+                android:text="6" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_4"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_7"
+                style="@style/ButtonStyle"
+                android:text="7" />
+
+            <Button
+                android:id="@+id/button_8"
+                style="@style/ButtonStyle"
+                android:text="8" />
+
+            <Button
+                android:id="@+id/button_9"
+                style="@style/ButtonStyle"
+                android:text="9" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_7"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_star"
+                style="@style/ButtonStyle"
+                android:text="*" />
+
+            <Button
+                android:id="@+id/button_0"
+                style="@style/ButtonStyle"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/button_hash"
+                style="@style/ButtonStyle"
+                android:text="#" />
+
+        </LinearLayout>
+
+        <!-- Botón de borrar
+        <Button
+            android:id="@+id/button_clear"
+            style="@style/ButtonStyle"
+            android:text="Borrar"
+            android -->
