@@ -17,5 +17,5 @@ func main() {
 	}))
 
 	//Solucion Google
-	fmt.Println(strings.Contains("palabra (word)", "word"))
+	fmt.Println(strings.Contains("palabra (words)", "words"))
 }
